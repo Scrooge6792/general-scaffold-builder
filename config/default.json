@@ -1,0 +1,11 @@
+{
+  "projectName": "my-project",
+  "dev": {
+    "host": ""
+  },
+  "prod": {
+    "host": ""
+  },
+  "HMR_PORT": 3000,
+  "title": "my-page"
+}

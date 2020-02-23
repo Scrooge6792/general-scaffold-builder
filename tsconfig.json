@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "types": [
+      "node",
+      "webpack-env",
+      "lodash"
+    ],
+    "allowJs": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": ["*"],
+      "@util/*": ["util/*"],
+      "@images/*": ["assets/images/*"],
+      "@component/*": ["component/*"],
+      "@module/*": ["module/*"],
+      "@router/*": ["router/*"],
+      "@store/*": ["store/*"],
+      "@hoc/*": ["component/hoc/*"],
+      "@type": ["types.d"]
+    }
+  },
+  "compileOnSave": true,
+  "exclude": ["node_modules"]
+}
