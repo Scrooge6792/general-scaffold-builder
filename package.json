@@ -72,7 +72,7 @@
     }
   },
   "lint-staged": {
-    "src/*.{js,jsx,ts,tsx}": [
+    "{src,config}/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "git add --all"
     ]
