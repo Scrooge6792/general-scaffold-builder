@@ -6,7 +6,8 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 
 const config = require('./config/default')
 const PORT = process.env.PORT || config.HMR_PORT
-const host = process.env.NODE_ENV === 'production' ? config.prod.host : config.dev.host
+const host =
+	process.env.NODE_ENV === 'production' ? config.prod.host : config.dev.host
 
 const app = express()
 const compiler = require('webpack')(webpackDev)

@@ -25,7 +25,7 @@ module.exports = {
 						options: {
 							cacheDirectory: true,
 							plugins: ['lodash'],
-							presets: [['env', { 'modules': false, 'targets': { 'node': 4 } }]]
+							presets: [['env', { modules: false, targets: { node: 4 } }]],
 						},
 					},
 				],
