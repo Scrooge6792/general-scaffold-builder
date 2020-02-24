@@ -13,7 +13,6 @@ const config = require('./default')
 module.exports = merge(baseConfig, {
 	entry: [
 		'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-		// 'react-hot-loader/patch',
 		path.resolve(__dirname, '../src/index.tsx')
 	],
 	devtool: '#cheap-module-source-map',

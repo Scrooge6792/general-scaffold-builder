@@ -45,16 +45,34 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: [{loader: 'style-loader'}, {loader: 'css-loader'}],
+				use: [
+					{loader: 'style-loader'},
+					{loader: 'css-loader'},
+					// {loader: 'postcss-loader'}
+				],
 			},
 			{
 				test: /\.less$/,
 				use: [
 					{loader: 'style-loader'},
-					{loader: 'css-loader'},
+					// {loader: 'css-modules-typescript-loader'},
+					{
+						loader: 'css-loader',
+						// options: {
+						// 	modules: true,
+						// 	sourceMap: true,
+						// 	localIdentName: '[local]___[hash:base64:5]'
+						// }
+					},
+					// {
+					// 	loader: 'resolve-url-loader',
+					// 	options: {
+					// 		sourceMap: true
+					// 	}
+					// },
 					{loader: 'less-loader'},
 				],
-				include: /node_modules/,
+				// include: /node_modules/,
 			},
 			{
 				test: /\.(png|jpg|gif)$/,

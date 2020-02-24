@@ -1,4 +1,5 @@
 import * as React from 'react'
+import './style/reset.less'
 
 class App extends React.PureComponent {
 	render() {
