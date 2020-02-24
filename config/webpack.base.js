@@ -1,10 +1,8 @@
 const path = require('path')
-const webpack = require('webpack')
-
 const config = require('./default')
 
 module.exports = {
-	entry: ['@babel/polyfill'],
+	entry: ['@babel/polyfill', 'react-hot-loader/patch'],
 	output: {
 		path: path.join(__dirname, '..build'),
 		filename: 'bundle.js',
@@ -12,6 +10,11 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
+		alias: Object.entries(require('../tsconfig').compilerOptions.paths)
+			.reduce((result, [alias, [dir]]) => ({
+				...result,
+				[alias.replace(/\/\*$/, '')]: path.resolve(__dirname, `../src/${dir.replace(/\*$/, '')}`),
+			}), {}),
 	},
 	module: {
 		rules: [

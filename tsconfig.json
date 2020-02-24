@@ -10,7 +10,10 @@
     "types": [
       "node",
       "webpack-env",
-      "lodash"
+      "lodash",
+      "react",
+      "react-dom",
+      "react-router"
     ],
     "allowJs": true,
     "noImplicitAny": false,
@@ -18,7 +21,6 @@
     "esModuleInterop": true,
     "baseUrl": "./src",
     "paths": {
-      "@src/*": ["*"],
       "@util/*": ["util/*"],
       "@images/*": ["assets/images/*"],
       "@component/*": ["component/*"],
