@@ -92,7 +92,7 @@
       "eslint --fix",
       "git add --all"
     ],
-    "src/*.less": [
+    "src/**/*.less": [
       "stylelint src/**/*.less --fix",
       "git add --all"
     ]
