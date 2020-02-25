@@ -28,7 +28,7 @@ module.exports = {
 						options: {
 							cacheDirectory: true,
 							plugins: ['lodash'],
-							presets: [['env', { modules: false, targets: { node: 4 } }]],
+							presets: [['env', {modules: false, targets: {node: 4}}]],
 						},
 					},
 				],
@@ -55,24 +55,23 @@ module.exports = {
 				test: /\.less$/,
 				use: [
 					{loader: 'style-loader'},
-					// {loader: 'css-modules-typescript-loader'},
 					{
 						loader: 'css-loader',
-						// options: {
-						// 	modules: true,
-						// 	sourceMap: true,
-						// 	localIdentName: '[local]___[hash:base64:5]'
-						// }
+						options: {
+							importLoaders: 2,
+							modules: {localIdentName: '[local]___[hash:base64:5]'},
+							sourceMap: process.env.NODE_ENV === 'development'
+						}
 					},
-					// {
-					// 	loader: 'resolve-url-loader',
-					// 	options: {
-					// 		sourceMap: true
-					// 	}
-					// },
+					{
+						loader: 'resolve-url-loader',
+						options: {
+							sourceMap: process.env.NODE_ENV === 'development'
+						}
+					},
+					{loader: 'postcss-loader'},
 					{loader: 'less-loader'},
 				],
-				// include: /node_modules/,
 			},
 			{
 				test: /\.(png|jpg|gif)$/,

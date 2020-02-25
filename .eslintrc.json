@@ -78,6 +78,7 @@
                     ".tsx"
                 ]
             }
-        ]
+        ],
+        "global-require": "off"
     }
 }
