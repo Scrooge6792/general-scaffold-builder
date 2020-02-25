@@ -1,9 +1,9 @@
 import * as React from 'react'
-import styles from './style/reset.less'
+import styles from './style/index.less'
 
 class App extends React.PureComponent {
 	render() {
-		return <div className={styles.header}>Hello world!</div>
+		return <div className={styles.baseText}>Hello world!</div>
 	}
 }
 

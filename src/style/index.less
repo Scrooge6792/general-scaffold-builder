@@ -1,0 +1,26 @@
+@import './color-font';
+
+:global {
+  .baseBlock {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    display: block;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+
+  .baseText {
+    color: @color-black;
+    font-family: @font-regular;
+    white-space: pre-wrap;
+    .f16;
+  }
+
+  .bg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

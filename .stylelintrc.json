@@ -6,6 +6,9 @@
     }],
     "selector-pseudo-element-no-unknown": [true, {
       "ignorePseudoElements": ["global"]
+    }],
+    "rule-empty-line-before": ["always", {
+      "except": ["first-nested"]
     }]
   }
 }
