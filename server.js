@@ -2,7 +2,6 @@ const path = require('path')
 const express = require('express')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackDev = require('./config/webpack.dev')
-const { createProxyMiddleware } = require('http-proxy-middleware')
 
 const config = require('./config/default')
 const PORT = process.env.PORT || config.HMR_PORT
@@ -34,7 +33,8 @@ app.get('/', (req, res) => {
 	res.render(BUILD_PATH)
 })
 
-// app.use(`/${config.projectName}`, createProxyMiddleware({
+// HTTP Proxy
+// app.use(`/${config.projectName}`, require('http-proxy-middleware').createProxyMiddleware({
 // 	target: host,
 // 	changeOrigin: true,
 // }))

@@ -7,6 +7,6 @@
     "host": ""
   },
   "HMR_PORT": 3000,
-  "title": "my-spa",
+  "title": "my-page",
   "localhost": "127.0.0.1"
 }

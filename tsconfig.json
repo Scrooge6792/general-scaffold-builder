@@ -3,7 +3,6 @@
     "outDir": "./dist/",
     "module": "esnext",
     "target": "esnext",
-    "jsx": "react",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
@@ -11,9 +10,6 @@
       "node",
       "webpack-env",
       "lodash",
-      "react",
-      "react-dom",
-      "react-router",
       "express",
       "less"
     ],
@@ -29,8 +25,7 @@
       "@module/*": ["module/*"],
       "@router/*": ["router/*"],
       "@store/*": ["store/*"],
-      "@hoc/*": ["component/hoc/*"],
-      "@type": ["types.d"]
+      "@hoc/*": ["component/hoc/*"]
     }
   },
   "compileOnSave": true,
