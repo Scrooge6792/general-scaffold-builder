@@ -79,6 +79,7 @@
                 ]
             }
         ],
-        "global-require": "off"
+        "global-require": "off",
+        "func-names": "off"
     }
 }
