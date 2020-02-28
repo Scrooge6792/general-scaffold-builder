@@ -9,13 +9,15 @@
     "moduleResolution": "node",
     "types": [
       "node",
+      "webpack",
       "webpack-env",
       "lodash",
       "react",
       "react-dom",
       "react-router",
       "express",
-      "less"
+      "less",
+      "react-loadable"
     ],
     "allowJs": true,
     "noImplicitAny": false,
@@ -29,7 +31,8 @@
       "@module/*": ["module/*"],
       "@router/*": ["router/*"],
       "@store/*": ["store/*"],
-      "@hoc/*": ["component/hoc/*"]
+      "@hoc/*": ["component/hoc/*"],
+      "@pages/*": ["pages/*"]
     }
   },
   "compileOnSave": true,
